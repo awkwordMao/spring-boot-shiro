@@ -6,7 +6,7 @@ import java.util.List;
 @Entity
 public class SysRole {
     @Id
-    @GeneratedValue
+//    @GeneratedValue
     private Integer id;
     private String role;
     private String description;

@@ -5,6 +5,7 @@ import java.util.List;
 
 @Entity
 public class SysPermission {
+    @Id
     private Integer id;
     private String name;
     @Column(columnDefinition = "enum('menu','button')")

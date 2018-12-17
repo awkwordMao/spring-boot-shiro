@@ -7,7 +7,7 @@ import java.util.List;
 @Entity
 public class UserInfo implements Serializable {
     @Id
-    @GeneratedValue
+//    @GeneratedValue
     private Integer uid;
     @Column(unique = true)
     private String userName;
@@ -16,7 +16,7 @@ public class UserInfo implements Serializable {
     private String salt;
     private byte statu;
     @ManyToMany
-    @JoinTable(name = "StsUserRole", joinColumns = {@JoinColumn(name = "uid")}, inverseJoinColumns = @JoinColumn(name = "roleId"))
+    @JoinTable(name = "SysUserRole", joinColumns = {@JoinColumn(name = "uid")}, inverseJoinColumns = @JoinColumn(name = "roleId"))
     private List<SysRole> roleList;
 
     public UserInfo() {
